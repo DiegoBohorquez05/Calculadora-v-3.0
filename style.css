@@ -25,6 +25,7 @@
 
 .valor{
     width: 40px;
+    visibility: hidden;
 }
 
 .operacion{
