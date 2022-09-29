@@ -34,6 +34,8 @@
 .operador{
     width: 20px;
     height: 30px;
+    padding-top: 5px;
+    padding-left: 6px;
 }
 
 .btn{
