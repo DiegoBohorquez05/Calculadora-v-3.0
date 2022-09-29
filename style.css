@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 40px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: solid 1px;
+}
+
+.display{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border: solid 1px;
+}
+
+.valor{
+    width: 40px;
+}
+
+.operacion{
+    display: flex;
+}
+
+.operador{
+    width: 20px;
+    height: 30px;
+}
+
+.btn{
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+}
+
