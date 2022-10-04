@@ -25,6 +25,13 @@
 
 .valor{
     width: 40px;
+}
+
+#val1{
+    visibility: hidden;
+}
+
+#val2{
     visibility: hidden;
 }
 

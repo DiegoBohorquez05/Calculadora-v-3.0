@@ -1,6 +1,5 @@
 const display=document.querySelector('.display')
 
-const valor=document.querySelectorAll('.valor')
 const operador=document.querySelector('.operador')
 
 const suma=document.querySelector('#suma')
@@ -21,6 +20,9 @@ const ocho=document.querySelector('#ocho')
 const nueve=document.querySelector('#nueve')
 const diez=document.querySelector('#diez')
 
+let variable=document.getElementById('val1')
+
+let numero2=0
 
 for(let i=0; i<=9;i++){
     document.getElementById('num'+i).addEventListener('click',presion)
@@ -30,48 +32,43 @@ function presion(e){
     display.innerText=display.innerText+e.target.value
 }
 
-
-
-igual.addEventListener('click',()=>{
-    if(operador.innerText==='+'){
-        display.innerText=(parseInt(valor[0].value)+ parseInt(valor[1].value))
-    }else if(operador.innerText==='-'){
-        display.innerText=(parseInt(valor[0].value)- parseInt(valor[1].value))
-    }else if(operador.innerText==='*'){
-        display.innerText=(parseInt(valor[0].value)* parseInt(valor[1].value))
-    }else if(operador.innerText==='/'){
-        display.innerText=(parseInt(valor[0].value)/ parseInt(valor[1].value))
-    }
-})
-
 suma.addEventListener('click',()=>{
-    display.innerHTML='+'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    operador.innerHTML='+'
+    variable=display.textContent
+    display.innerText=''
 })
 
 resta.addEventListener('click',()=>{
     operador.innerHTML='-'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    variable=display.textContent
+    display.innerText=''
 })
 
 multi.addEventListener('click',()=>{
     operador.innerHTML='*'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    variable=display.textContent
+    display.innerText=''
 })
 
 divi.addEventListener('click',()=>{
     operador.innerHTML='/'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    variable=display.textContent
+    display.innerText=''
 })
 
 borrar.addEventListener('click',()=>{
-    valor[0].value=' '
-    valor[1].value=' '
     operador.innerText='.'
     display.innerText=' '
 })
 
+igual.addEventListener('click',()=>{
+    if(operador.innerText==='+'){
+        display.innerText=(parseInt(variable)+ parseInt(display.textContent))
+    }else if(operador.innerText==='-'){
+        display.innerText=(parseInt(variable)- parseInt(display.textContent))
+    }else if(operador.innerText==='*'){
+        display.innerText=(parseInt(variable)* parseInt(display.textContent))
+    }else if(operador.innerText==='/'){
+        display.innerText=(parseInt(variable)/ parseInt(display.textContent))
+    }
+})
